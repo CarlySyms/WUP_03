@@ -46,6 +46,22 @@ The people who sit in the back drink three times the amount of alcohol as the  p
 
 ## Inferential Tests
 
+# Inferential
+
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+The P value is so small that it is unlikely that the alcohol consumption in all three seats is the same
+
+## When significant follow up with TukeyHSD  
+
+```{r}
+plot(TukeyHSD(model1))
+```
+
+The TukeyHSD plot shows that the people in the back drink a lot more than the people in the front; The people in the back drink more than the people in the middle; and the Middle-Front shows that, because zero is in that confidence interval, there is no evidence of difference in the average alcohol consumption of people in the middle and the front.  
+
 ## Conclusions
 
 
