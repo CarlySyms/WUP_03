@@ -38,6 +38,11 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 These BoxPlot shows that the heavy drinkers sit in the back row
 
 ## Numerical Summarys 
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
+
+The people who sit in the back drink three times the amount of alcohol as the  people in the front and the middle.
 
 ## Inferential Tests
 
